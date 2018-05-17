@@ -46,7 +46,7 @@ for i in range(8000):
 for i in range(2000):
     #get 64*64 numpy matrix of a single image
     imagename = validation_table.cell(i,0).value
-    image = Image.open(IMAGESAVEURL_training + '\\' + imagename)
+    image = Image.open(IMAGESAVEURL_validation + '\\' + imagename)
     width, height = image.size
     imagedata = image.getdata()
     imagematrix = np.matrix(imagedata, dtype='float32') / 255.0
